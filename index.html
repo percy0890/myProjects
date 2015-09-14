@@ -1,0 +1,131 @@
+<html ng-app='myApp'>
+<head>
+	<script type="text/javascript" src='angular.min.js'></script>
+	<script type="text/javascript" src='script.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body ng-controller='myCtrl'>
+	<div id='header'>
+		header
+			<div id='anchor'>
+				<a href="">View Fav</a>
+				<a href="">Reset</a>
+			</div>
+	</div>
+	
+	<div id='left'>
+
+		<p>control panel</p>
+			<div id='add' ng-click='hideSec1()'>
+				<label>add or remove choices</label></div>
+		<div id='sec1'>
+			<div id='dumper'>
+				<p>select dumper</p>
+				<hr>
+				<input type="checkbox"> CD1
+			
+			</div>
+			<div id='yard'>
+				<p> upgrade yard</p>
+				<hr>
+				<input type="checkbox"> South
+				<input type="checkbox"> North
+				<input type="checkbox"> West
+			</div>
+			<div id="reclaimer">
+				<p> add reclaimer</p>
+				<hr>
+				<input type="checkbox"> South
+				<input type="checkbox"> West
+			</div>
+		</div>
+	
+
+<div id='imp' ng-click='hideSec2()'>
+<label>improve choices</label>
+	</div>
+<div id='sec2'>
+<div id='upgrade'>
+<p>Upgrade</p>
+<hr>
+<input type="checkbox"> outflow
+<input type="checkbox"> inflow
+	</div>
+<div id='dumpCap'>	
+<p> Car dumper Capacity</p>
+<hr>
+<input type="checkbox"> Current
+<input type="checkbox"> +10%
+<input type="checkbox"> +20%
+</div>
+<div id='dumpVar'>	
+<p> Car dumper variability</p>
+<hr>
+<input type="checkbox"> Current
+<input type="checkbox"> -25%
+<input type="checkbox"> -50%
+</div>
+
+<div id='shipCap'>	
+<p> Ship Loader Capacity</p>
+<hr>
+<input type="checkbox"> Current
+<input type="checkbox"> +10%
+<input type="checkbox"> +20%
+</div>
+
+<div id='shipVar'>	
+<p> Ship Loader Variability</p>
+<hr>
+<input type="checkbox"> Current
+<input type="checkbox"> -25%
+<input type="checkbox"> -50%
+</div>
+
+</div>
+
+
+<div id='opModel' ng-click='hideSec3()'>
+<label>Change operating model</label></div>
+<div id='sec3'>
+<div id='sys'>
+<p>system independance</p>
+<hr>
+<input type="checkbox"> independant
+<input type="checkbox"> networked
+	</div>
+<div id='prod'>	
+<p>Product Strategy</p>
+<hr>
+<input type="checkbox"> 2 Fines
+<input type="checkbox"> 4 Fines
+<input type="checkbox"> 5 Fines
+</div>
+<div id='d2shipCap'>	
+<p> Direct to ship capability</p>
+<hr>
+<input type="checkbox"> DTS
+<input type="checkbox"> No DTS
+
+</div>
+
+</div>
+<hr>
+<div>
+<button>Done</button>
+<button>Save</button>
+</div>
+</div>
+
+
+<div id='right'>
+	<p>map wil be here, soon! :)</p>
+</div>
+
+<div id='footer'>
+		footer
+	</div>
+
+</body>
+</html>
