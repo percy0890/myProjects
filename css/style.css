@@ -1,4 +1,9 @@
 /* ========- Header -============== */
+body{
+
+	background-color: #868686;
+}
+
 .header{
 	position: relative;
 	width: 64em;
