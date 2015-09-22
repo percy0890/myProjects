@@ -1,0 +1,291 @@
+/* ========- Header -============== */
+.header{
+	position: relative;
+	width: 64em;
+	height: 60px;
+	margin: -8px;
+	border-bottom: 1px solid #c7c7c7;
+	box-shadow: 0px 0px 13px rgba(0,0,0,0.3);
+	background-color: #D8D8D8;
+	
+}
+.header .logo{
+  font-family: 'papyrus';
+	margin-left: 20px;
+}
+
+.header .reset{
+	color: #868686;
+	display: inline-block;
+	height: 100%;
+	padding: 0 19px 0 46px;
+	font-size: 18px;
+	line-height: 52px;
+  
+}
+
+.header .reset:hover{
+	background-color: #868686;
+	color: #fff;
+}	
+
+.header .header_part{	
+	margin-left: 560px;
+	color: #868686;
+	display: inline-block;
+	height: 100%;
+	padding: 0 19px 0 46px;
+	font-size: 18px;
+	line-height: 52px;
+}
+
+.header_part:hover{
+	background-color: #868686;
+	color: #fff;
+}	
+
+
+/* =================- Sidebar -====================== */
+.sidebar{
+	width: 350px;
+	height: 700px;
+	background-color: #6E6E6E;
+	float: left;
+	margin-left: -8px;
+
+}
+
+.sidebar .sidebar_header{
+	padding: 10px;
+}
+.sidebar .sidebar_header h1{
+	font-family: 'Arial Narrow';
+	font-size: 22px;
+	color: #e0701c;
+	font-weight: lighter;
+	line-height: 15px;
+}
+
+.sidebar .sidebar_header h2{
+	font-family: 'Arial';
+	font-size: 12px;
+	color: #c8c8c8;
+	
+}
+
+.sidebar ul{
+	margin-top: -1px;
+	padding: 10px;
+    list-style-type: none;
+    height: 525px;  
+}
+
+.sidebar>ul>li{
+	margin-top: 10px;
+
+}
+
+.sidebar>ul>li .section{
+	background-color: #424242;
+	color: #fff;
+	font-size: 1.2em;
+	padding: 0.8em;
+	border-radius: 0.5em;
+}
+
+.sidebar>ul>li>ul{
+	overflow: scroll;
+	max-height: 320px;
+}
+
+.sidebar>ul>li>ul>li{
+	color: #fff;
+	margin: 0.5em 0;
+	padding: 1em;
+	border-radius: 0.5em;
+	background-color: #585858;
+}
+
+.sidebar legend{
+	border-bottom: 1px solid #777;
+	display: block;
+	width: 85%;
+	font-size: 1.2em;
+	padding: 0 0 0.7em 2em;
+}
+
+.sidebar .group div{
+	display: inline-block;
+	line-height: 37px;
+	padding-left: 1em;
+}
+
+.sidebar .cta{
+	width: 158px;
+	height: 47px;
+	background-color: #e0701c;
+	color: #fff;
+	border: 0px;
+	font-size: 12px;
+	text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+	border-radius: 3px;
+	cursor: pointer;
+	margin-left: .8em;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0px 2px 1px rgba(255,255,255,0.3) inset;
+}
+
+
+/* ====================- Infobar -======================= */
+
+.info{
+	float: left;
+	display: inline;
+	width: 137px;
+	height: 50px;
+	padding: 10px;
+	border-right: 2px solid #f0f0f0;
+	margin-top: 20px;
+	margin-left: 10px;
+
+}
+.info h1{
+	color: #b4b4b2;
+	font-size: 12px;
+	font-family: 'Arial';
+	margin-left: 5px;
+	
+}
+
+.info div{
+	color: #6c97b9;
+	font-size: 36px;
+	font-family: Arial;
+	margin-top: -8px;
+	position: absolute;
+}
+
+.info>div>span {
+	font-size: 12px;
+	position: absolute;
+}
+
+
+
+#payback{
+	border: none;
+	position: absolute;
+}
+
+
+
+/* ====================- footer -======================= */
+.footer{
+	width: 640px;
+	height: 110px;
+	background-color: #fafaf8;
+	margin-left: 360px;
+	margin-top: 10px;
+}
+
+.current_scenario{
+	float: left;
+	padding: 10px;
+	font-family: 'Arial';
+	width: 60px;
+	height: 40px;
+	color: #9bb6cb;
+}
+
+.changes_made {
+	float: left;
+	margin-left: 110px;
+	position: absolute;
+	background-color:;
+}
+
+.changes_made>h1 {
+	padding: 4px;
+	color: #919191;
+	font-size: 12px;
+	font-family: 'Arial';
+}
+
+.changes_made>div {
+	font-size: 12px;
+	font-family: 'Arial';
+	color: #919191;
+}
+
+.changes_made ol{
+	margin-top: -8px;
+}
+
+.changes_made li {
+	margin-left: -20px;
+	padding: 1px;
+}
+
+.map_changes{
+	float: left;
+	margin-left: 345px;
+	position: absolute;
+}
+.map_changes>h1{
+	margin-left: 17px;
+	padding: 4px;
+	color: #919191;
+	font-size: 12px;
+	font-family: 'Arial';
+}
+.map_changes>div{
+	font-size: 12px;
+	font-family: 'Arial';
+	color: #919191;
+	
+	
+}
+.map_changes ul{
+	margin-top: -8px;
+}
+.map_changes li{
+	margin-left: -20px;
+	padding: 1px;
+	list-style-type: none;
+}
+
+.utilisation_legend{
+	float: left;
+	margin-left: 495px;
+	position: absolute;
+}
+.utilisation_legend>h1{
+	margin-left: 17px;
+	padding: 4px;
+	color: #919191;
+	font-size: 12px;
+	font-family: 'Arial';
+}
+.utilisation_legend>div{
+	font-size: 12px;
+	font-family: 'Arial';
+	color: #919191;
+	
+	
+}
+.utilisation_legend ul{
+	margin-top: -8px;
+}
+.utilisation_legend li{
+	margin-left: -20px;
+	padding: 1px;
+	list-style-type: none;
+}
+
+svg{
+	padding: 50px;
+	position: relative;
+}
+
+.cd5{
+	margin-top: 200px;
+}

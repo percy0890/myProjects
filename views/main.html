@@ -1,0 +1,307 @@
+		<!-- header -->
+		<div class='header'>
+				<span class='logo'>My Project</span>
+				<span class='header_part' ng-click=''>View Favourite Scenarios</span>
+				<span class='reset' ng-click=''>Reset</span> 
+		</div>
+		
+		<!-- sidebar  -->
+		<div class='sidebar'>
+			<div class='sidebar_header'>
+				<h1>CONTROL PANEL</h1>
+				<h2>You can make limited selections from this panel</h2>
+			</div> 
+			<ul >
+
+				<!-- first section -->
+				<li ng-controller='SectionCtrl'>                          
+					<div class='section' ng-click='displaySec(1)'>Add/Remove Equipment<span id='expand'>&#43;</span></div>
+					<ul ng-show='sec1display'>
+						<li>
+							<legend class='dumper'>Select Dumper to Remove</legend>
+							<div class='group'>
+								<div ng-controller='ParameterCtrl'><label><input type='checkbox'>CD1</label></div>
+							</div>
+						</li>
+						<li>
+							<legend class='yard'>Upgrade Yard</legend>
+							<div class='group'>
+								<div ng-controller='ParameterCtrl'><label><input type='checkbox'>South Yard</label></div>
+								<div ng-controller='ParameterCtrl'><label><input type='checkbox'>West Yard</label></div>
+								<div ng-controller='ParameterCtrl'><label><input type='checkbox'>North Yard</label></div>
+							</div>
+						</li>
+						<li>
+							<legend class='reclaimer'>Add Reclaimer</legend>
+							<div class='group'>
+								<div ng-controller='ParameterCtrl'><label><input type='checkbox'>South Yard</label></div>
+								<div ng-controller='ParameterCtrl'><label><input type='checkbox'>North Yard</label></div>
+							</div>
+						</li>
+					</ul>
+				</li>	
+
+				<!-- second section -->
+				<li ng-controller='SectionCtrl'>
+					<div class='section' ng-click='displaySec(2)'>Improve Equipment<span id='expand'>&#43;</span></div>
+					<ul ng-show='sec2display'>
+						<li>
+							<legend>Upgrade Conveyors</legend>
+							<div class='group'>
+								<div ng-controller='ParameterCtrl'><label><input type='checkbox'>Outflow</label></div>
+								<div ng-controller='ParameterCtrl'><label><input type='checkbox'>Inflow</label></div>
+							</div>
+						</li>
+						<li>
+							<legend>Car Dumper Capacity</legend>
+							<div class='group' ng-controller='ParameterCtrl'>
+								<div><label><input type='radio' name='dumperCap' value=''>Current</label></div>
+								<div><label><input type='radio' name='dumperCap' value=''>+10%</label></div>
+								<div><label><input type='radio' name='dumperCap' value=''>+20%</label></div>
+							</div>
+						</li>
+						<li>
+							<legend>Car Dumper Variability</legend>
+							<div class='group' ng-controller='ParameterCtrl'>
+								<div><label><input type='radio' name='dumperVar' value=''>Current</label></div>
+								<div><label><input type='radio' name='dumperVar' value=''>-25%</label></div>
+								<div><label><input type='radio' name='dumperVar' value=''>-50%</label></div>
+							</div>
+						</li>
+						<li>
+							<legend>Ship Loader Capacity</legend>
+							<div class='group' ng-controller='ParameterCtrl'>
+								<div><label><input type='radio' name='loaderCap' value=''>Current</label></div>
+								<div><label><input type='radio' name='loaderCap' value=''>+10%</label></div>
+								<div><label><input type='radio' name='loaderCap' value=''>+20%</label></div>
+							</div>
+						</li>
+						<li>
+							<legend>Ship Loader Variability</legend>
+							<div class='group' ng-controller='ParameterCtrl'>
+								<div><label><input type='radio' name='loaderVar' value=''>Current</label></div>
+								<div><label><input type='radio' name='loaderVar' value=''>-25%</label></div>
+								<div><label><input type='radio' name='loaderVar' value=''>-50%</label></div>
+							</div>
+						</li>
+					</ul>
+				</li>	
+
+				<!-- third section -->
+				<li ng-controller='SectionCtrl'>
+					<div class='section' ng-click='displaySec(3)'>Change Operating Model<span id='expand'>&#43;</span></div>
+					<ul ng-show='sec3display'>
+						<li>
+							<legend>System Independence</legend>
+							<div class='group' ng-controller='ParameterCtrl'>
+								<div><label><input type='radio' name='independence' value=''>Independent</label></div>
+								<div><label><input type='radio' name='independence' value=''>Networked</label></div>
+							</div>
+						</li>
+						<li>
+							<legend>Product strategy</legend>
+							<div class='group' ng-controller='ParameterCtrl'>
+								<div><label><input type='radio' name='lump' value=''>2 Fines, 1 Lump</label></div>
+								<div><label><input type='radio' name='lump' value=''>4 Fines, 1 Lump</label></div>
+								<div><label><input type='radio' name='lump' value=''>5 Fines, 1 Lump</label></div>
+							</div>
+						</li>
+						<li>
+							<legend>Direct to ship capability</legend>
+							<div class='group' ng-controller='ParameterCtrl'>
+								<div><label><input type='radio' name='dts' value=''>DTS</label></div>
+								<div><label><input type='radio' name='dts' value=''>No DTS</label></div>
+							</div>
+						</li>
+					</ul>
+				</li>	
+			</ul> 
+			<button class="cta" ng-click=''>DONE</button>
+      <button class="cta" ng-click=''>SAVE</button>
+		</div>
+
+
+    <!-- Infobar  -->
+		<div class='info'>
+		  <h1>Throughput</h1>
+		  <div>233 <span>Mtpa</span></div>
+		</div>
+
+		<div class='info'>
+		  <h1>Capex</h1>
+		  <div>0 <span>$m</span></div>
+		</div>
+
+		<div class='info' id="capital_intensity">
+		  <h1>Capital Intensity</h1>
+		  <div>N/A <span>$/t</span></div>
+		</div>
+
+		<div class='info' id='payback'>
+		  <h1>Payback</h1>
+		  <div>N/A <span>years</span></div>
+		</div>
+
+    <!-- Charts -->
+		<svg width="550" height="380">
+			<rect x="0" y="0" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="10" y="30" fill="#0B2161" >CD4</text>
+
+			<rect x="0" y="100" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="10" y="130" fill="#0B2161" >CD5</text>
+
+			<rect x="0" y="170" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="10" y="200" fill="#0B2161" >CD1</text>
+
+			<rect x="0" y="220" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="10" y="250" fill="#0B2161" >CD3</text>
+
+			<rect x="0" y="320" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="10" y="350" fill="#0B2161" >CD2</text>
+
+			<rect x="500" y="-20" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="510" y="10" fill="#0B2161" >SL8</text>
+
+			<rect x="500" y="20" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="510" y="50" fill="#0B2161" >SL7</text>
+
+			<rect x="500" y="80" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="510" y="110" fill="#0B2161" >SL3</text>
+
+			<rect x="500" y="120" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="510" y="150" fill="#0B2161" >SL4</text>
+
+			<rect x="500" y="195" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="510" y="225" fill="#0B2161" >SL1</text>
+
+			<rect x="500" y="235" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="510" y="265" fill="#0B2161" >SL4</text>
+
+			<rect x="500" y="295" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="510" y="325" fill="#0B2161" >SL5</text>
+
+			<rect x="500" y="335" width="80" height="35" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="510" y="365" fill="#0B2161" >SL6</text>
+
+			<rect x="250" y="20" width="80" height="80" stroke="black" fill="#FAFAFA" rx="5" stroke-width="1" />
+			<rect x="250" y="120" width="80" height="80" stroke="black" fill="#FAFAFA" rx="5" stroke-width="1" />
+			<rect x="250" y="240" width="80" height="80" stroke="black" fill="#FAFAFA" rx="5" stroke-width="1" />
+			<rect x="250" y="340" width="80" height="80" stroke="black" fill="#FAFAFA" rx="5" stroke-width="1" />
+
+			<rect x="190" y="25" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="195" y="43" fill="#0B2161" font-size="11">SKT9</text>
+
+			<rect x="190" y="55" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="195" y="73" fill="#0B2161" font-size="11">SKT10</text>
+
+			<rect x="190" y="125" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="195" y="143" fill="#0B2161" font-size="11">SKT11</text>
+
+			<rect x="190" y="155" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="195" y="173" fill="#0B2161" font-size="11">SKT12</text>
+
+			<rect x="190" y="240" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="195" y="258" fill="#0B2161" font-size="11">SKT5</text>
+
+			<rect x="190" y="270" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="195" y="288" fill="#0B2161" font-size="11">SKT9</text>
+
+			<rect x="190" y="300" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="195" y="318" fill="#0B2161" font-size="11">SKT4</text>
+
+			<rect x="190" y="340" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="195" y="358" fill="#0B2161" font-size="11">SKT6</text>
+
+			<rect x="190" y="370" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="195" y="388" fill="#0B2161" font-size="11">SKT7</text>
+
+			<rect x="190" y="400" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="195" y="418" fill="#0B2161" font-size="11">SKT14</text>
+
+			<rect x="340" y="25" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="345" y="43" fill="#0B2161" font-size="11">BWR7</text>
+
+			<rect x="340" y="55" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="345" y="73" fill="#0B2161" font-size="11">BWR10</text>
+
+			<rect x="340" y="145" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="345" y="163" fill="#0B2161" font-size="11">BWR8</text>
+
+			<rect x="340" y="250" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="345" y="268" fill="#0B2161" font-size="11">BWR5</text>
+
+			<rect x="340" y="280" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="345" y="298" fill="#0B2161" font-size="11">BWR4</text>
+
+			<rect x="340" y="350" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="345" y="368" fill="#0B2161" font-size="11">BWR6</text>
+
+			<rect x="340" y="380" width="50" height="23" stroke="black" fill="#D8D8D8" rx="5" stroke-width="1" />
+			<text x="345" y="398" fill="#0B2161" font-size="11">BWR11</text>
+
+
+
+			  <line x1="80" y1="15" x2="480" y2="15" stroke="gray" stroke-width="2"/>
+			  <line x1="80" y1="115" x2="480" y2="115" stroke="gray" stroke-width="2"/>
+			  <line x1="80" y1="235" x2="480" y2="235" stroke="gray" stroke-width="2"/>
+			  <line x1="80" y1="335" x2="480" y2="335" stroke="gray" stroke-width="2"/>
+
+			  <line x1="480" y1="-5" x2="480" y2="35" stroke="gray" stroke-width="2"/>
+			  <line x1="480" y1="95" x2="480" y2="135" stroke="gray" stroke-width="2"/>
+			  <line x1="480" y1="215" x2="480" y2="255" stroke="gray" stroke-width="2"/>
+			  <line x1="480" y1="315" x2="480" y2="355" stroke="gray" stroke-width="2"/>
+
+			  <line x1="479" y1="-5" x2="500" y2="-5" stroke="gray" stroke-width="2"/>
+			  <line x1="479" y1="35" x2="500" y2="35" stroke="gray" stroke-width="2"/>
+			  <line x1="479" y1="95" x2="500" y2="95" stroke="gray" stroke-width="2"/>
+			  <line x1="479" y1="135" x2="500" y2="135" stroke="gray" stroke-width="2"/>
+			  <line x1="479" y1="215" x2="500" y2="215" stroke="gray" stroke-width="2"/>
+			  <line x1="479" y1="255" x2="500" y2="255" stroke="gray" stroke-width="2"/>
+			  <line x1="479" y1="315" x2="500" y2="315" stroke="gray" stroke-width="2"/>
+			  <line x1="479" y1="355" x2="500" y2="355" stroke="gray" stroke-width="2"/>
+
+			  <line x1="105" y1="15" x2="105" y2="115" stroke="gray" stroke-width="2"/>
+			  <line x1="115" y1="115" x2="115" y2="235" stroke="gray" stroke-width="2"/>
+			  <line x1="105" y1="235" x2="105" y2="335" stroke="gray" stroke-width="2"/>
+		</svg>
+    
+
+		<!-- footer -->
+		<div class='footer'>
+		  <div class='current_scenario'>Current Scenario</div>
+
+		  <div class='changes_made'>
+			  <h1>Changes made</h1>
+			  <div>
+				  <ol>
+					  <li></li>
+				  </ol>
+			  </div>
+		  </div>
+
+		  <div class='map_changes'>
+			  <h1>Map Changes</h1>
+			  <div>
+				  <ul>
+					  <li>Added Equipment</li>
+					  <li>Change in capacity<br>and variability</li>
+				  </ul>
+			  </div>
+		  </div>
+
+		  <div class='utilisation_legend'>
+			  <h1>Utilisation Legend</h1>
+			  <div>
+				  <ul>
+					  <li>55%</li>
+					  <li>50 - 55%</li>
+					  <li>45 - 50%</li>
+					  <li>below 45%</li>
+				  </ul>
+			  </div>
+		  </div>
+		</div>
+
+
+
+
